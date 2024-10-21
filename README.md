@@ -1,59 +1,29 @@
-Deep Averaging Networks (DAN) for Sentiment Classification
+# README
 
-Overview
+## Implementation
 
-This Assignment implements Deep Averaging Networks (DAN) for sentiment classification. The models are built and trained using Python 3 and PyTorch. This README provides instructions on how to run the code for different parts of the assignment, as well as how to install necessary dependencies.
+To implement the code, there are two `.ipynb` files:
 
-PyTorch (latest version, CPU support is sufficient)
+- `gene_classification_pancreas.ipynb`
+- `cell_classification_pancreas.ipynb`
 
-Run the following commands same directory as main.py, BOWmodel.py, sentiment_data.py, DANmodels.py, and bpe.py
+For data analysis, refer to the `Data_analysis.ipynb` file.
 
-## PART 1 A Commands
+## Dataset
 
-```bash
-python main.py --model DAN --embedding_dim 50
-python main.py --model DAN --embedding_dim 300
-
-python main.py --model DAN1 --embedding_dim 50
-python main.py --model DAN2 --embedding_dim 50
-
-python main.py --model DAN1 --embedding_dim 300
-python main.py --model DAN2 --embedding_dim 300
-
-```
-## PART 1 B Commands
+Download the Figshare dataset using the following command:
 
 ```bash
-python main.py --model DAN --random_init --embedding_dim 50
-python main.py --model DAN --random_init --embedding_dim 300
+!wget https://figshare.com/ndownloader/files/43480497 -O data.zip
 
-python main.py --model DAN1 --random_init --embedding_dim 50
-python main.py --model DAN2 --random_init --embedding_dim 50
+## Pretrained Weights:
+Pretrained weights required to run the code can be found here:
+https://drive.google.com/file/d/1uZLPLuywcQp1uqx0LO4EE-4bejUNpK8A/view?usp=drive_link
 
-python main.py --model DAN1 --random_init --embedding_dim 300
-python main.py --model DAN2 --random_init --embedding_dim 300
+## Source Code:
+Some parts of the source code are used in our files which should be downloaded from the link below.
+Please place them under the geneformer/ folder before running gene_classification_pancreas.ipynb and cell_classification_pancreas.ipynb:
+https://drive.google.com/file/d/1JMp_n15m0tQvCTAL7TvQ6vpj14jkVGgO/view?usp=drive_link
 
-```
-
-## PART 2 A Commands
-
-```bash
-
-python main.py --model DAN --embedding_dim 50 --use_bpe --vocab_size 1000
-python main.py --model DAN --embedding_dim 50 --use_bpe --vocab_size 2000
-python main.py --model DAN --embedding_dim 50 --use_bpe --vocab_size 3000
-python main.py --model DAN --embedding_dim 50 --use_bpe --vocab_size 5000
-python main.py --model DAN --embedding_dim 50 --use_bpe --vocab_size 8000
-
-
-python main.py --model DAN1 --embedding_dim 50 --use_bpe --vocab_size 1000
-python main.py --model DAN1 --embedding_dim 50 --use_bpe --vocab_size 2000
-python main.py --model DAN1 --embedding_dim 50 --use_bpe --vocab_size 3000
-python main.py --model DAN1 --embedding_dim 50 --use_bpe --vocab_size 5000
-python main.py --model DAN --embedding_dim 50 --use_bpe --vocab_size 8000
-
-
-```
-
-
-
+For eg:- the perturber_utils.py file present in the zip file should be geneformer/perturber_utils.py while running the notebooks.
+ 
